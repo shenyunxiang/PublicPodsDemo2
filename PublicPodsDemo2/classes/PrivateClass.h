@@ -1,5 +1,5 @@
 //
-//  PublicPodTest.h
+//  PrivateClass.h
 //  PublicPodsDemo2
 //
 //  Created by 沈云翔 on 2018/4/3.
@@ -8,8 +8,6 @@
 
 #import <Foundation/Foundation.h>
 
-@interface PublicPodTest : NSObject
-
-+ (void)print;
+@interface PrivateClass : NSObject
 
 @end

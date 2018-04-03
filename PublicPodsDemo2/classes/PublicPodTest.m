@@ -10,4 +10,14 @@
 
 @implementation PublicPodTest
 
+
++ (void)print{
+
+#ifdef DEBUG
+    NSLog(@"%@: %s", self, __FUNCTION__);
+#endif
+    
+    
+}
+
 @end

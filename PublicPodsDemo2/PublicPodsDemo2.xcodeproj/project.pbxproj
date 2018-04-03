@@ -15,7 +15,8 @@
 		09E192722073258C005712A9 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 09E192712073258C005712A9 /* main.m */; };
 		09E1927C2073258C005712A9 /* PublicPodsDemo2Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 09E1927B2073258C005712A9 /* PublicPodsDemo2Tests.m */; };
 		09E192872073258C005712A9 /* PublicPodsDemo2UITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 09E192862073258C005712A9 /* PublicPodsDemo2UITests.m */; };
-		09E19297207325C2005712A9 /* PublicPodTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 09E19296207325C2005712A9 /* PublicPodTest.m */; };
+		09E1929E2073C879005712A9 /* PublicPodTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 09E1929D2073C878005712A9 /* PublicPodTest.m */; };
+		09E192A12073CA99005712A9 /* PrivateClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 09E192A02073CA99005712A9 /* PrivateClass.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,8 +53,10 @@
 		09E192822073258C005712A9 /* PublicPodsDemo2UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PublicPodsDemo2UITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		09E192862073258C005712A9 /* PublicPodsDemo2UITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PublicPodsDemo2UITests.m; sourceTree = "<group>"; };
 		09E192882073258C005712A9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		09E19295207325C2005712A9 /* PublicPodTest.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PublicPodTest.h; sourceTree = "<group>"; };
-		09E19296207325C2005712A9 /* PublicPodTest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PublicPodTest.m; sourceTree = "<group>"; };
+		09E1929C2073C878005712A9 /* PublicPodTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PublicPodTest.h; sourceTree = "<group>"; };
+		09E1929D2073C878005712A9 /* PublicPodTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PublicPodTest.m; sourceTree = "<group>"; };
+		09E1929F2073CA99005712A9 /* PrivateClass.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrivateClass.h; sourceTree = "<group>"; };
+		09E192A02073CA99005712A9 /* PrivateClass.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PrivateClass.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,7 +87,7 @@
 		09E192562073258C005712A9 = {
 			isa = PBXGroup;
 			children = (
-				09E19294207325A3005712A9 /* classes */,
+				09E1929B2073C878005712A9 /* classes */,
 				09E192612073258C005712A9 /* PublicPodsDemo2 */,
 				09E1927A2073258C005712A9 /* PublicPodsDemo2Tests */,
 				09E192852073258C005712A9 /* PublicPodsDemo2UITests */,
@@ -136,11 +139,13 @@
 			path = PublicPodsDemo2UITests;
 			sourceTree = "<group>";
 		};
-		09E19294207325A3005712A9 /* classes */ = {
+		09E1929B2073C878005712A9 /* classes */ = {
 			isa = PBXGroup;
 			children = (
-				09E19295207325C2005712A9 /* PublicPodTest.h */,
-				09E19296207325C2005712A9 /* PublicPodTest.m */,
+				09E1929C2073C878005712A9 /* PublicPodTest.h */,
+				09E1929D2073C878005712A9 /* PublicPodTest.m */,
+				09E1929F2073CA99005712A9 /* PrivateClass.h */,
+				09E192A02073CA99005712A9 /* PrivateClass.m */,
 			);
 			path = classes;
 			sourceTree = "<group>";
@@ -278,10 +283,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				09E19297207325C2005712A9 /* PublicPodTest.m in Sources */,
+				09E1929E2073C879005712A9 /* PublicPodTest.m in Sources */,
 				09E192672073258C005712A9 /* ViewController.m in Sources */,
 				09E192722073258C005712A9 /* main.m in Sources */,
 				09E192642073258C005712A9 /* AppDelegate.m in Sources */,
+				09E192A12073CA99005712A9 /* PrivateClass.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -444,11 +450,20 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = "";
+				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)-1.0.0/ios",
+				);
 				INFOPLIST_FILE = PublicPodsDemo2/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.syx.PublicPodsDemo2;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -457,11 +472,20 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = "";
+				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)-1.0.0/ios",
+				);
 				INFOPLIST_FILE = PublicPodsDemo2/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.syx.PublicPodsDemo2;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;

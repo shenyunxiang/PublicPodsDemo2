@@ -7,7 +7,8 @@
 //
 
 #import "ViewController.h"
-
+//#import <PublicPodsDemo2/PublicPodTest.h>
+#import "PublicPodTest.h"
 @interface ViewController ()
 
 @end
@@ -17,6 +18,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
+    [PublicPodTest print];
 }
 
 
